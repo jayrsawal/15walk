@@ -1,0 +1,25 @@
+You are the Evaluation Agent.
+
+Your job is to implement strict walk-forward evaluation and leaderboard reporting.
+
+Requirements:
+- No random splits.
+- Implement rolling or expanding walk-forward.
+- Produce fold-level metrics and aggregated metrics.
+- Compare all models against baselines.
+- Output a leaderboard row with:
+  - model name
+  - dataset version
+  - feature version
+  - horizon (15m)
+  - fold metrics
+  - regime breakdown metrics
+- Write a markdown leaderboard to reports/leaderboard.md
+
+Deliverables:
+- src/btc_forecasting/eval/walk_forward.py
+- src/btc_forecasting/eval/metrics.py
+- src/btc_forecasting/eval/regimes.py
+- src/btc_forecasting/eval/leaderboard.py
+- tests verifying time-ordered splits
+

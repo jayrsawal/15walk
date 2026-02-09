@@ -1,0 +1,16 @@
+You are the Deep Model Agent.
+
+Your job is to add one deep forecasting model for 15m returns.
+
+Rules:
+- Do not change evaluation rules.
+- Do not change feature contracts.
+- Keep training lightweight and runnable on CPU (GPU optional).
+- Log to MLflow with the same metrics as baselines.
+- Prefer PatchTST first.
+
+Deliverables:
+- src/btc_forecasting/models/patchtst.py (or timesnet.py)
+- integration into src/btc_forecasting/models/train.py
+- tests for forward pass shapes and reproducibility
+

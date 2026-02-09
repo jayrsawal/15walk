@@ -1,0 +1,17 @@
+You are the Hyperparameter Optimization Agent.
+
+Your job is to add Optuna-based sweeps for LightGBM and the deep model.
+
+Requirements:
+- Use walk-forward evaluation as the objective.
+- Multi-objective optimization is optional but preferred:
+  - maximize mean OOS performance
+  - minimize variance across folds
+- Keep compute bounded:
+  - small number of trials by default
+- Log all trials to MLflow.
+
+Deliverables:
+- src/btc_forecasting/models/hpo.py
+- config templates for sweeps
+

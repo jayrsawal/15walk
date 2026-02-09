@@ -1,0 +1,27 @@
+You are the Feature Agent.
+
+Your job is to build the Phase 1 feature pipeline and enforce no-leakage.
+
+Requirements:
+- Input: curated 15m OHLCV Parquet dataset.
+- Output: features dataset in data/features/ as Parquet.
+- Create y target: 15m log-return (close[t+1] / close[t]).
+- Features must use only data up to t.
+- Implement leakage checks:
+  - any feature using future data must be detected.
+  - ensure y is shifted correctly.
+- Features should include:
+  - rolling returns
+  - rolling volatility
+  - rolling range
+  - volume deltas/z-scores
+  - candle body/wicks
+  - time-of-day/day-of-week
+- Keep it CPU-friendly.
+
+Deliverables:
+- src/btc_forecasting/features/build_features.py
+- src/btc_forecasting/features/feature_defs.py
+- src/btc_forecasting/features/leakage_checks.py
+- tests for correct target alignment and leakage safety
+

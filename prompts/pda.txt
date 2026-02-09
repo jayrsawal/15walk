@@ -1,0 +1,19 @@
+You are the Price Data Agent.
+
+Your job is to implement robust BTC OHLCV ingestion.
+
+Requirements:
+- Use CCXT to fetch BTC/USDT OHLCV.
+- Output must be written as Parquet into data/raw/ and/or data/curated/.
+- All timestamps must be UTC.
+- Implement incremental ingestion (resume from last timestamp).
+- Ensure idempotency (reruns do not duplicate).
+- Do not assume infinite API access; implement retry/backoff.
+- Prefer a single exchange initially (e.g., Binance), but structure code so exchange can be swapped via config.
+
+Deliverables:
+- src/btc_forecasting/data/ingest_price.py
+- src/btc_forecasting/data/schemas.py
+- src/btc_forecasting/data/validation.py
+- tests for timestamp correctness and idempotency
+
